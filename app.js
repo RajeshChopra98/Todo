@@ -20,6 +20,7 @@ app.use(
     origin: ["https://real-time-data-gq37vl.flutterflow.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization", "withCredentials"]
   })
 );
 
