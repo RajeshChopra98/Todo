@@ -24,11 +24,7 @@ export const login = async (req, res, next) => {
 
 export const register = async (req, res) => {
   try {
-    const { name, email, password, confirmPassword } = req.body;
-
-    if(password !== confirmPassword) {
-      return next(new ErrorHandler("Password and ConfirmPassword does not match", 400));
-    }
+    const { name, email, password } = req.body;
 
     let user = await User.findOne({ email });
 
